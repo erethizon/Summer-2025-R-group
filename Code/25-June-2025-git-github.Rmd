@@ -15,3 +15,31 @@ Remember this:
 git config --global credential.helper manager
 ```
 
+
+To enable Git Credential Manager (GCM) for Git on Windows, you should either install Git for Windows with the GCM component or install GCM separately as a standalone service. When using Git with HTTPS, GCM handles authentication by storing credentials in the Windows Credential Manager. 
+Here's how to enable GCM:
+1. Install Git for Windows with GCM (Recommended):
+Download the latest Git for Windows installer from the Git website. 
+During installation, ensure you select the "Git Credential Manager" option. 
+This will install Git and automatically configure it to use GCM. 
+2. Install GCM as a standalone service:
+If you already have Git installed, you can download and install GCM separately from the Git Credential Manager for Windows repository. 
+Follow the instructions on the repository to install it. 
+You'll likely need to configure Git to use the GCM helper after installation. 
+3. Configure Git to use GCM (if needed):
+Open a Git Bash or command prompt.
+Run the following command to configure Git to use the manager helper: 
+Code
+
+    git config --global credential.helper manager
+ 
+4. Verify the configuration:
+Run the following command to verify that the credential helper is set to "manager":
+Code
+
+    git config credential.helper
+ 
+5. Using GCM:
+When you perform Git operations that require authentication (e.g., git push, git clone over HTTPS), Git will automatically use GCM. 
+GCM will present a graphical interface for you to authenticate, often using a browser window. 
+Once you authenticate, GCM stores your credentials securely in the Windows Credential Manager. 
