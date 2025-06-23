@@ -1,4 +1,2 @@
 # Summer-2025-R-group
-
-
-Here's the line for my readme file
+This is a project for teaching git summer 2025
