@@ -24,11 +24,11 @@ Does this seem familiar?
 
 ![Do your files look like this?](images/file_naming_hell.jpg){fig-alt="Cartoon showing directory with poorly named and organized files." fig-align="center"}
 
-Here's my embarasing real example:
+Here's my embarrassing real example:
 
 ![Files pane with a hot mess in terms of organization.](images/file_pane_mess.png){fig-align="center"}
 
-You can see from the above picture that we were using git (note the .git and .gitignore files), but I didn't really have a good grasp of version control at that point.
+You can see from the above picture that we were using git (note the .git and .gitignore files), but I didn't really have a good grasp of version control at that time in my life.
 
 ::: {.callout-note title="Take note!"}
 ## We can do better by using version control!
@@ -57,11 +57,11 @@ You move your files and your changes between your local repository and your remo
 
 Before you can use git and github with your RStudio workflow, you will need to make sure that:
 
-1.  git is installed on your computer
+1.  git is installed on your computer (git for windows is a good choice for pc users)
 2.  You have created an account on github
 3.  You have checked that your RStudio can talk to your github account.
 
-I \*strongly recommend\* checking out this website: [Happy Git and GitHub for the useR](https://happygitwithr.com/) which will walk you through most of the required steps and which encourages use of the `usethis` package which also installs a number of other helper packages.
+I **strongly recommend** checking out this website: [Happy Git and GitHub for the useR](https://happygitwithr.com/) which will walk you through most of the required steps and which encourages use of the `usethis` package which also installs a number of other helper packages.
 
 ### 4. Recommended workflow: start on github -\> then create rstudio project
 
@@ -77,12 +77,12 @@ Regardless of whether you are creating a new project or cloning someone else's p
 
 #### Using the terminal and basic bash commands
 
-You use git from the terminal on your computer. You can access the terminal right in RStudio, but you don't have to.
+You use git from the terminal on your computer. You can access the terminal right in RStudio, but you don't have to. Some people find the terminal intimidating at first; you may wish to use a git desktop client that works as a graphical user interface as you get started. Here is a link to the git desktop client that comes free from github.
 
 Here's an overview of some basic terminal (bash) commands:
 
 | Command           | Function                                               |
-|-----------------------|------------------------------------------------|
+|-------------------|-----------------------------------------------------|
 | `pwd`             | prints working directory                               |
 | `cd` \[filepath\] | changes directory to specified path                    |
 | `cd ~`            | changes to home directory                              |
@@ -109,7 +109,7 @@ You need certain commands to configure git for your computer. Here's an overview
 | `git config -global user.name "your name"` | Sets the name that will be attached to your work |
 | `git config -global user.email "you@example.edu"` | Sets the email address that will be attached to your work |
 | `git config  -global color.ui.auto` | Enables some colorization of your git output |
-| `git config credential.helper store` | For PC users, bypasses need to authenticate every time you pull/push/fetch etc. |
+| `git config credential.helper manager` | For PC users, bypasses need to authenticate every time you pull/push/fetch etc. |
 
 : Commands to configure git
 
@@ -140,6 +140,8 @@ You will use other git commands for your day-to-day work. Here are some.
 
 : Some day-to-day git commands
 
-Now that you know a bit about git and github, let's give it a try!
+Now that you know a little bit about git and git hub, let's try it!
+
+You are going to clone an existing github repository that includes some data. We will add some code to tweak the data a bit, and then you will go through the steps of staging and comitting your changes and then pushing them to github.
 
 \
