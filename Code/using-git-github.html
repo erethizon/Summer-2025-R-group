@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.33">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -29,10 +29,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="using-git-github_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="using-git-github_files/libs/quarto-html/anchor.min.js"></script>
 <link href="using-git-github_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="using-git-github_files/libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="using-git-github_files/libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="using-git-github_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="using-git-github_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="using-git-github_files/libs/bootstrap/bootstrap-fe6593aca1dacbc749dc3d2ba78c8639.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="using-git-github_files/libs/bootstrap/bootstrap-1bc8a17f135ab3d594c857e9f48e611b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -83,14 +83,14 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Do your files look like this?</figcaption>
 </figure>
 </div>
-<p>Here’s my embarasing real example:</p>
+<p>Here’s my embarrassing real example:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/file_pane_mess.png" class="img-fluid figure-img"></p>
 <figcaption>Files pane with a hot mess in terms of organization.</figcaption>
 </figure>
 </div>
-<p>You can see from the above picture that we were using git (note the .git and .gitignore files), but I didn’t really have a good grasp of version control at that point.</p>
+<p>You can see from the above picture that we were using git (note the .git and .gitignore files), but I didn’t really have a good grasp of version control at that time in my life.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Take note!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -125,22 +125,21 @@ Take note!
 </figure>
 </div>
 <p><br>
-</p>
-<p>You move your files and your changes between your local repository and your remote repository (hosted on github) via <code>push</code> and <code>pull</code> commands.</p>
+You move your files and your changes between your local repository and your remote repository (hosted on github) via <code>push</code> and <code>pull</code> commands.</p>
 </section>
 </section>
 <section id="gitting-started-with-github" class="level3">
 <h3 class="anchored" data-anchor-id="gitting-started-with-github">3. Gitting started with github</h3>
 <p>Before you can use git and github with your RStudio workflow, you will need to make sure that:</p>
 <ol type="1">
-<li>git is installed on your computer</li>
+<li>git is installed on your computer (git for windows is a good choice for pc users)</li>
 <li>You have created an account on github</li>
 <li>You have checked that your RStudio can talk to your github account.</li>
 </ol>
-<p>I *strongly recommend* checking out this website: <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> which will walk you through most of the required steps and which encourages use of the <code>usethis</code> package which also installs a number of other helper packages.</p>
+<p>I <strong>strongly recommend</strong> checking out this website: <a href="https://happygitwithr.com/">Happy Git and GitHub for the useR</a> which will walk you through most of the required steps and which encourages use of the <code>usethis</code> package which also installs a number of other helper packages.</p>
 </section>
 <section id="recommended-workflow-start-on-github---then-create-rstudio-project" class="level3">
-<h3 class="anchored" data-anchor-id="recommended-workflow-start-on-github---then-create-rstudio-project">4. Recommended workflow start on github -&gt; then create rstudio project</h3>
+<h3 class="anchored" data-anchor-id="recommended-workflow-start-on-github---then-create-rstudio-project">4. Recommended workflow: start on github -&gt; then create rstudio project</h3>
 <p>If you want to use git &amp; github for version control and tie them to your RStudio project, things generally work most smoothly if you work in this order.</p>
 <p>Regardless of whether you are creating a new project or cloning someone else’s project from github, the process is largely the same.</p>
 <ol type="1">
@@ -153,13 +152,13 @@ Take note!
 <h3 class="anchored" data-anchor-id="lets-try-it---using-git-and-github-commands-in-the-terminal">5. Let’s try it - using git and github commands in the terminal</h3>
 <section id="using-the-terminal-and-basic-bash-commands" class="level4">
 <h4 class="anchored" data-anchor-id="using-the-terminal-and-basic-bash-commands">Using the terminal and basic bash commands</h4>
-<p>You use git from the terminal on your computer. You can access the terminal right in RStudio, but you don’t have to.</p>
+<p>You use git from the terminal on your computer. You can access the terminal right in RStudio, but you don’t have to. Some people find the terminal intimidating at first; you may wish to use a git desktop client that works as a graphical user interface as you get started. Here is a link to the git desktop client that comes free from github.</p>
 <p>Here’s an overview of some basic terminal (bash) commands:</p>
 <table class="caption-top table">
 <caption>Some common terminal commands</caption>
 <colgroup>
-<col style="width: 32%">
-<col style="width: 67%">
+<col style="width: 25%">
+<col style="width: 74%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -243,7 +242,7 @@ Take note!
 <td>Enables some colorization of your git output</td>
 </tr>
 <tr class="even">
-<td><code>git config credential.helper store</code></td>
+<td><code>git config credential.helper manager</code></td>
 <td>For PC users, bypasses need to authenticate every time you pull/push/fetch etc.</td>
 </tr>
 </tbody>
@@ -338,7 +337,8 @@ Take note!
 </tr>
 </tbody>
 </table>
-<p>Now that you know a bit about git and github, let’s give it a try!</p>
+<p>Now that you know a little bit about git and git hub, let’s try it!</p>
+<p>You are going to clone an existing github repository that includes some data. We will add some code to tweak the data a bit, and then you will go through the steps of staging and comitting your changes and then pushing them to github.</p>
 <p><br>
 </p>
 </section>
@@ -429,8 +429,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -541,7 +539,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
