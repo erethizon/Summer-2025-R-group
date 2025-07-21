@@ -4,23 +4,95 @@ format: html
 editor: visual
 ---
 
-## Quarto
+## Introduction
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+Set up the workspace
+Turn on libraries
+Read in trees.csv as data object called "trees"
 
 ```{r}
-1 + 1
-```
+rm(list = ls()) #clear R's environment
+library(tidyverse)
+library(here)
 
-You can add options to executable code like this
+trees <- read.csv(here("Data/trees.csv"))
+```
+Set up a statistical model
 
 ```{r}
-#| echo: false
-2 * 2
+tree.mod <- aov(DBH ~ Species, data = trees)
+summary(tree.mod)
+```
+Take a look at our data!
+
+```{r}
+unique(trees$Species)
+```
+Let's fix the species column
+Let's do the first one together: sugar maple
+
+Use the `which` function and return row numbers that contain "sugar maple" as Species
+
+```{r}
+#option 1
+bad_maples <- which(trees$Species == "sugar maple" | trees$Species == "maple")
+
+#option2 uses %in%
+
+ maples <- c("maple",  "sugar maple") 
+
+ bad_maples2 <- which(trees$Species %in% maples)
+ 
+ #option3 also uses %in%
+ 
+ bad_maples3 <- which(trees$Species %in% c("maple", "sugar maple"))
+```
+Now we know which rows need to be repaired, so let's do it!
+
+```{r}
+trees$Species[bad_maples] <- "Sugar maple"
+unique(trees$Species)
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+```{r}
+fix_beech <- which(trees$Species == "Am. Beech" | trees$Species == "Beach")
+
+trees$Species[fix_beech] <- "American beech"
+unique(trees$Species)
+```
+```{r}
+fix_birch <- which(trees$Species %in% c("Y. birch", "yellow birch"))
+
+trees$Species[fix_birch] <- "Yellow birch"
+unique(trees$Species)
+
+```
+
+
+```{r}
+tree.mod <- aov(DBH ~ Species, data = trees)
+summary(tree.mod)
+```
+```{r}
+unique(trees$Site)
+```
+Look at continuous data
+
+```{r}
+ggplot(trees, aes(x = DBH, fill = Species)) +
+  geom_histogram()
+```
+
+```{r}
+which(trees$DBH > 48)
+```
+
+
+
+
+
+
+
+
+
+
